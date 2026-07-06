@@ -1,0 +1,20 @@
+{
+  "name": "phantom-vulnerability-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo for 'The Phantom Vulnerability: A Node.js Ghost Story' — 100% JS/TS app that ships Go binaries",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@xyz/xy-react": "file:./packages/xy-react",
+    "next": "15.4.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "overrides": {
+    "esbuild": "0.25.5"
+  }
+}
