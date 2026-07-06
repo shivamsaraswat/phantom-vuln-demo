@@ -15,12 +15,22 @@ That chain is what makes the phantom visible: a Go-based executable can appear i
 ## Project structure
 
 - [package.json](package.json) — app dependencies and scripts
+- [demo.sh](demo.sh) — interactive walkthrough script for the live demo
 - [Dockerfile](Dockerfile) — multi-stage build example
 - [Dockerfile.single-stage](Dockerfile.single-stage) — single-stage build example
 - [next.config.js](next.config.js) — standalone output and tracing exclusions
 - [packages/xy-react/package.json](packages/xy-react/package.json) — internal component library stub
 - [packages/xy-react/src/index.js](packages/xy-react/src/index.js) — demo component exports
 - [src/app/page.js](src/app/page.js) — simple app entry point
+
+## Quick start
+
+```bash
+npm install
+./demo.sh
+```
+
+Use `./demo.sh --fast` if you want to skip the pauses between steps.
 
 ## Demo flow
 
