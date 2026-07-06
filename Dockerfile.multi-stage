@@ -4,7 +4,7 @@
 # compiled output + production deps. esbuild never boards
 # the ship.
 #
-#   docker build -t phantom-demo:after .
+#   docker build -f Dockerfile.multi-stage -t phantom-demo:after .
 #   docker run --rm phantom-demo:after sh -c "find / -name esbuild 2>/dev/null | grep . || echo 'esbuild: ABSENT'"
 #   → esbuild: ABSENT
 #
