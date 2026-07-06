@@ -4,7 +4,7 @@
 # compiled output + production deps. esbuild never boards
 # the ship.
 #
-#   docker build -f Dockerfile.multi-stage -t phantom-demo:after .
+#   docker buildx build -f Dockerfile.multi-stage -t phantom-demo:after .
 #   docker run --rm phantom-demo:after sh -c "find / -name esbuild 2>/dev/null | grep . || echo 'esbuild: ABSENT'"
 #   → esbuild: ABSENT
 #
@@ -35,6 +35,8 @@ RUN npm run build
 FROM node:22-alpine AS runner
 
 ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
+ENV PORT=3000
 WORKDIR /app
 
 # Next.js standalone output contains the server + only the

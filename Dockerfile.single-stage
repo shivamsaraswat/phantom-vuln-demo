@@ -4,7 +4,7 @@
 # Result: esbuild's Go binary lands in the production image
 # and the scanner fires 12 HIGH alerts.
 #
-#   docker build -f Dockerfile.single-stage -t phantom-demo:before .
+#   docker buildx build -f Dockerfile.single-stage -t phantom-demo:before .
 #   docker run --rm phantom-demo:before sh -c "find /app/node_modules/@esbuild -name esbuild"
 #   → /app/node_modules/@esbuild/linux-x64/bin/esbuild   ← the phantom
 # ============================================================
