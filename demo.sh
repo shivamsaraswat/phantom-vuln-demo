@@ -62,7 +62,7 @@ step "STEP 7 — (Optional, needs Docker) The fix, part 2: multi-stage build (sl
 run "docker buildx build -f Dockerfile.single-stage -t phantom-demo:before ."
 run "docker buildx build -f Dockerfile.multi-stage -t phantom-demo:after ."
 run "docker run --rm phantom-demo:after sh -c 'find / -name esbuild 2>/dev/null | grep . || echo esbuild: ABSENT'"
-run "docker images | grep phantom-demo   # ~59% smaller"
+run "docker images | grep phantom-demo
 
 step "RESET — restore the vulnerable state for the next run"
 run "git checkout packages/xy-react/package.json 2>/dev/null || cp .demo-backup/xy-react-package.json packages/xy-react/package.json"
