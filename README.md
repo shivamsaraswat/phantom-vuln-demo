@@ -52,6 +52,14 @@ docker build -t demo-multi-stage:latest .
 
 The single-stage image keeps the build tool in the production image, while the multi-stage image ships only the runtime output.
 
+To access the app from your browser, publish the container port when you run it:
+
+```bash
+docker run --rm -p 3000:3000 phantom-demo:before
+# or
+# docker run --rm -p 3000:3000 phantom-demo:after
+```
+
 ## Notes
 
 The demo is intentionally lightweight and focused on the vulnerability story rather than full application complexity.
